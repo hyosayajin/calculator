@@ -1,0 +1,29 @@
+@use "../tools/tools" as *;
+
+// ** RULES **//
+
+@layer basic {
+	:root {
+		// *** COLORs VARIABLE *** //
+		--color-black: hsl(0, 0%, 0%);
+		--color-white: hsl(0, 0%, 100%);
+
+		--color-glass: hsla(0, 0%, 100%, 0.15);
+		--shadow: hsla(0, 0%, 0%, 0.75);
+
+		--color-primary: currentcolor;
+		--color-secondary: currentcolor;
+		--color-tertiary: currentcolor;
+
+		// *** VALUES VARIABLE *** //
+
+		--radius: 4px;
+		--400ms: 400ms;
+
+		font-family: "Rubik", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+		font-size: 16px;
+
+		// color: var(--color-white);
+	}
+}

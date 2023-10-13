@@ -1,0 +1,25 @@
+@use "../../tools/tools" as *;
+
+// # **RULES**
+
+@layer basic {
+	h1,
+	h2,
+	h3 {
+		&::first-letter {
+			text-transform: uppercase;
+		}
+	}
+
+	h2 {
+		margin-bottom: calc($rem * 2);
+
+		@include font(calc($rem * 2), 700);
+	}
+
+	h3 {
+		margin-bottom: $rem;
+
+		@include font(calc($rem * 1.5), 600);
+	}
+}

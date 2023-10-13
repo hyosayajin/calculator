@@ -1,0 +1,25 @@
+@use "../../tools/tools" as *;
+
+// ** RULES **//
+
+@layer basic {
+	.calculator-wrapper {
+		display: flex;
+		align-items: center;
+
+		&.scroll {
+			gap: calc($rem * 7);
+
+			max-width: 85vw;
+
+			padding: $rem;
+
+			overflow-x: scroll;
+			overflow-y: clip;
+
+			> .calculator {
+				flex-shrink: 0;
+			}
+		}
+	}
+}

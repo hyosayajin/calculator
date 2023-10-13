@@ -1,0 +1,11 @@
+// *** PARTIALS ***//
+@use "./partials/partials";
+
+// *** ATOMS ***//
+@use "./components/atoms/atoms";
+
+// *** MOLECULES ***//
+@use "./components/molecules/molecules";
+
+// *** ORGANES ***//
+@use "./components/organes/organes";

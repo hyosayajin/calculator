@@ -1,0 +1,12 @@
+@use "../../tools/tools" as *;
+
+// ** RULES **//
+@layer basic {
+	.header {
+		display: flex;
+		align-items: center;
+		gap: calc($rem);
+
+		margin-bottom: calc($rem * 4);
+	}
+}

@@ -1,0 +1,41 @@
+@use "../../tools/tools" as *;
+
+// ** RULES **//
+@layer basic {
+	.footer {
+		display: flex;
+		@include flex();
+		flex-direction: column;
+		gap: $rem;
+
+		margin-top: auto;
+
+		padding-top: 4vw;
+		padding-bottom: $rem;
+
+		text-align: center;
+	}
+
+	.footer img {
+		width: calc($rem * 2);
+		height: calc($rem * 2);
+	}
+
+	.social {
+		text-transform: capitalize;
+		ul {
+			display: flex;
+			gap: calc($rem * 1.5);
+		}
+	}
+
+	.footer-menu {
+		position: fixed;
+		right: calc($rem * 2);
+		bottom: calc($rem * 2);
+		
+		display: flex;
+		align-items: center;
+		gap: calc($rem * 2);
+	}
+}

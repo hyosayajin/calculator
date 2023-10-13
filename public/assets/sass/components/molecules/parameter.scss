@@ -1,0 +1,58 @@
+@use "../../tools/tools" as *;
+
+// ** RULES **//
+
+@layer basic {
+	.parameter {
+		display: none;
+
+		// position: fixed;
+		// top: calc($rem * 7);
+
+		width: 16vw;
+		max-width: 500px;
+
+		height: 65vh;
+		max-height: 744px;
+
+		padding: calc($rem) * 2;
+
+		@include border-radius-var();
+
+		background-color: var(--color-glass);
+
+		overflow-y: scroll;
+
+		scrollbar-gutter: stable;
+
+		&.set {
+			display: initial;
+		}
+	}
+
+	.options-list {
+		margin-bottom: calc($rem * 2);
+
+		li {
+			margin-bottom: calc($rem * 2);
+
+			cursor: default;
+		}
+	}
+
+	.rulesTitle {
+		display: inline-block;
+
+		&::first-letter {
+			text-transform: uppercase;
+		}
+
+		margin-bottom: $rem;
+
+		font-weight: 600;
+
+		&::after {
+			content: ":";
+		}
+	}
+}

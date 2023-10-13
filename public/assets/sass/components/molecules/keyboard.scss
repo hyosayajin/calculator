@@ -1,0 +1,35 @@
+@use "../../tools/tools" as *;
+
+// ** RULES **//
+
+@layer basic {
+	.keyboard {
+		width: $keyboard_Dim;
+
+		margin-bottom: auto;
+
+		> div {
+			margin-top: $rem;
+		}
+	}
+	.funcKeys {
+		display: flex;
+		gap: $rem;
+	}
+
+	.numbers {
+		display: flex;
+		gap: $rem;
+		flex-wrap: wrap;
+	}
+
+	// ### **Buttons**
+
+	.result {
+		display: flex;
+		justify-content: space-between;
+	}
+	.equal, .del {
+		width: calc((($rem * 3) * 2) + $rem);
+	}
+}

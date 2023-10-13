@@ -1,0 +1,15 @@
+// *** VARIBLES ***//
+
+@use "./variables.scss";
+
+// *** FLEX PRORETY ***//
+
+%flex {
+	display: flex;
+}
+
+%flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

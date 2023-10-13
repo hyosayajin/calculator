@@ -1,0 +1,14 @@
+@use "../../tools/tools" as *;
+
+// # **RULES**
+
+@layer basic {
+	.shortCuts-container {
+		position: fixed;
+		z-index: 15;
+		top: calc($rem * 7);
+
+		display: flex;
+		gap: calc($rem * 4);
+	}
+}

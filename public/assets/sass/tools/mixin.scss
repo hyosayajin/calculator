@@ -1,0 +1,38 @@
+// *** VARIBLES ***//
+
+@use "./variables.scss" as *;
+
+// # **FLEX PROPRETY**
+
+@mixin flex($justify: center, $align: center) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+// # **SHAPE PROPRETY**
+
+@mixin box-size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+	@mixin box($size) {
+		width: $size;
+		height: $size;
+	}
+
+@mixin border-radius-var {
+	border-radius: var(--radius);
+}
+
+@mixin border-radius {
+	border-radius: $radius;
+}
+
+// # **TEXT PROPRETY**
+
+@mixin font($size, $weight) {
+	font-size: $size;
+	font-weight: $weight;
+}

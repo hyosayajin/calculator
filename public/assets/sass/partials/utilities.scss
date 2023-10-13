@@ -1,0 +1,9 @@
+@use "../tools/tools" as *;
+
+// # **RULES**
+
+@layer utilities {
+	.underline {
+		text-decoration: underline;
+	}
+}

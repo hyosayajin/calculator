@@ -1,0 +1,52 @@
+@use "../../tools/tools" as *;
+
+// ** RULES **//
+
+@layer basic {
+	.helper {
+		display: none;
+
+		// position: fixed;
+		// top: calc($rem * 7);
+
+		width: 16vw;
+		max-width: 500px;
+
+		height: 65vh;
+		max-height: 744px;
+
+		padding: calc($rem) * 2;
+
+		@include border-radius-var();
+
+		background-color: var(--color-glass);
+
+		overflow-y: scroll;
+
+		scrollbar-gutter: stable;
+
+		&.helpMe {
+			display: initial;
+		}
+	}
+
+	.statements-container p {
+		margin-bottom: calc($rem * 2);
+	}
+
+	.rulesTitle {
+		display: inline-block;
+
+		&::first-letter {
+			text-transform: uppercase;
+		}
+
+		margin-bottom: $rem;
+
+		font-weight: 600;
+
+		&::after {
+			content: ":";
+		}
+	}
+}

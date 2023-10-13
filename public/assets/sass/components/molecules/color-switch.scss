@@ -1,0 +1,15 @@
+@use "../../tools/tools" as *;
+
+// ** RULES **//
+
+@layer basic {
+	.color-switch {
+		position: absolute;
+		right: $right-offset-options;
+		bottom: 0;
+
+		display: flex;
+		flex-direction: column;
+		gap: $rem;
+	}
+}

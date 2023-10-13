@@ -1,0 +1,85 @@
+@use "../../tools/tools" as *;
+
+// ** RULES **//
+
+@layer basic {
+	button,
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		min-width: calc($rem * 3);
+		max-width: 250px;
+
+		min-height: calc($rem * 3);
+
+		border: 1px solid silver;
+		border-radius: 4px;
+
+		font-family: inherit;
+
+		font-weight: 600;
+
+		text-transform: capitalize;
+
+		background-color: var(--color-white);
+
+		transition: 400ms;
+
+		&:hover {
+			box-shadow: 0 0 10px rgba(0, 128, 0, 0.582);
+		}
+	}
+
+	.trigger-btn {
+		font-size: calc($rem * 1.5);
+	}
+
+	.ops-button.active {
+		background-color: rgba(0, 128, 0, 0.4);
+	}
+
+	.add,
+	.minus {
+		position: absolute;
+		right: $right-offset-options;
+
+		font-size: calc($rem * 1.5);
+	}
+
+	.minus {
+		margin-bottom: calc($rem * 8);
+	}
+
+	.c-black,
+	.c-white {
+		&::after {
+			content: "";
+			position: absolute;
+
+			@include box(calc(($rem * 3) / 1.5));
+
+			border: 1px solid;
+			border-radius: 50%;
+
+			transition: var(--400ms);
+		}
+	}
+
+	.c-black::after {
+		background-color: var(--color-black);
+	}
+	.c-white::after {
+		background-color: var(--color-white);
+	}
+
+	.remove {
+		min-width: calc($rem * 1.5);
+		min-height: calc($rem * 1.5);
+
+		background-color: red;
+
+		color: var(--color-white);
+	}
+}

@@ -1,0 +1,109 @@
+@use "../../tools/tools" as *;
+
+// ** RULES **//
+
+@layer basic {
+	.calculator {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		min-width: 300px;
+		max-width: 400px;
+
+		// margin: auto;
+
+		padding: calc($rem * 3) $rem $rem;
+
+		@include box-size(25vw, 800px);
+
+		@include border-radius;
+
+		background-color: var(--color-white);
+
+		box-shadow: 0 0 10px silver;
+
+		transition: background-color var(--400ms);
+	}
+
+	// ***Calculator with color's switch id***
+	.calculator.cBlack {
+		background-color: var(--color-black);
+	}
+
+	// ***Calculator with color's switch id***
+	.calculator.cWhite {
+		background-color: var(--color-white);
+	}
+
+	// ### Calculator's entries
+
+	.entries {
+		width: $keyboard_Dim;
+		height: 5%;
+
+		margin-bottom: calc($rem * 3);
+
+		border: none;
+		border-radius: var(--radius);
+
+		@include font(18px, 600);
+
+		color: $color-black;
+
+		background-color: var(--color-white);
+
+		&:focus {
+			outline: 2px solid green;
+		}
+	}
+
+	// ### Calculator's notifications
+
+	.history {
+		width: $keyboard_Dim;
+		height: 14vw;
+
+		padding: $rem;
+
+		border-radius: inherit;
+
+		color: var(--color-black);
+
+		background-color: var(--color-white);
+
+		overflow: scroll;
+	}
+
+	.history ul {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: $rem;
+	}
+
+	.history-items {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		gap: calc($rem * 2);
+
+		padding: calc($rem / 2);
+
+		border-radius: var(--radius);
+
+		font-weight: 600;
+
+		transition: var(--400ms);
+
+		cursor: default;
+
+		&:hover {
+			color: var(--color-white);
+			background-color: var(--shadow);
+		}
+	}
+}

@@ -1,0 +1,11 @@
+@use "../../tools/tools" as *;
+
+// ** RULES **//
+
+@layer basic {
+	.project-version {
+		display: flex;
+		flex-direction: column;
+		margin-left: auto;
+	}
+}

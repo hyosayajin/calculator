@@ -1,0 +1,62 @@
+@use "../tools/tools" as *;
+
+// # **RULES**
+
+@layer basic {
+	.body {
+		// &.colorWhite {
+		// 	--color-glass: var(--shadow);
+
+		// 	color: var(--color-black);
+		// 	background-color: hsl(0, 0%, 100%);
+		// }
+
+		transition: background-color var(--400ms);
+
+		&.colorBlack {
+			--color-black: hsl(0, 0%, 35%);
+
+			background-color: hsl(0, 0%, 0%);
+		}
+	}
+
+	.app {
+		display: flex;
+		flex-direction: column;
+
+		min-height: 100vh;
+		max-width: 95%;
+
+		margin: auto;
+
+		padding-top: calc($rem * 2);
+		padding-bottom: calc($rem * 2);
+	}
+
+	.main {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		margin: auto;
+	}
+
+	.not-dispo {
+		position: fixed;
+		z-index: 25;
+		inset: 0;
+
+		@include flex();
+
+		font-size: calc($rem * 2);
+		font-weight: 600;
+
+		text-decoration: underline;
+
+		color: var(--color-white);
+
+		background-color: var(--color-black);
+	}
+}

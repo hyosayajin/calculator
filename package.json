@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "private": true,
+  "version": "1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+
+    "sass" : "sass ./public/assets/sass/style.scss ./public/assets/css/style.css -w",
+    "sass-no-w" : "sass ./public/assets/sass/style.scss ./public/assets/css/style.css"
+  },
+  
+  "devDependencies": {
+    "sass": "^1.63.4",
+    "vite": "^4.3.9"
+  }
+}

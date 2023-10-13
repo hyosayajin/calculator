@@ -1,0 +1,43 @@
+@use "../../tools/tools" as *;
+
+// ** RULES **//
+
+@layer basic {
+	.header-navigation ul {
+		--color-white-hn: hsla(0, 0%, 100%, 0.2);
+
+		display: flex;
+		align-items: center;
+		gap: calc($rem * 2);
+
+		min-width: fit-content;
+		max-width: 1200px;
+
+		width: 75vw;
+
+		height: calc($rem * 3);
+
+		padding-left: calc($rem * 2);
+		padding-right: calc($rem * 2);
+
+		border-radius: 4px;
+
+		background-color: var(--color-glass);
+
+		outline: 1px solid transparent;
+
+		backdrop-filter: blur(15px);
+
+		transition: 400ms linear;
+	}
+
+	.header-navigation li {
+		> a {
+			display: inline-block;
+
+			&::first-letter {
+				text-transform: uppercase;
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+    "name": "hyo/vanilla",
+    "description": "A base of simple build",
+    "license": "Open",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hyosayajin",
+            "email": "117482185+hyosayajin@users.noreply.github.com"
+        }
+    ],
+    
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    },
+
+    "require-dev": {
+        "symfony/var-dumper": "^6.3"
+    }
+}
